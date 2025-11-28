@@ -63,121 +63,121 @@ export function Hero() {
             className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto"
           >
             {/* Firebase-Icon (vergrößert) */}
-            <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+            <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/angular-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-           <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+           <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/js-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-            <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+            <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/ts-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-            <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+            <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/html-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-            <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+            <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/css-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-             <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+             <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/git-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-               <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+               <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/firebase-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-               <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+               <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/rest-api-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-               <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+               <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/scrum-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-               <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+               <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/wordpress-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-               <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+               <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/material-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-               <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+               <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/woo-commerce-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
-               <div className="h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 hover:[transform:rotate(360deg)]">
+               <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
                 src="/challenge-icon.png"
                 alt="Icon"
-                width={96}
-                height={96}
-                className="h-full w-full object-contain"
+                width={88}
+                height={100}
+                className="h-[100px] w-[88px] object-contain mx-auto"
               />
             </div>
           </motion.div>
