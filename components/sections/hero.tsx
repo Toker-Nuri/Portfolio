@@ -146,7 +146,7 @@ export function Hero() {
             </div>
                <div className="h-[108px] w-[114px] transition-transform duration-500 hover:[transform:rotate(360deg)]">
               <Image
-                src="/wordpress-icon.png"
+                src="/worldpress1-icon.png"
                 alt="Icon"
                 width={88}
                 height={100}
