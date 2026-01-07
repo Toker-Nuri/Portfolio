@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/components/language-provider";
 
 export function Navigation() {
   const [mounted, setMounted] = useState(false);
@@ -13,14 +14,16 @@ export function Navigation() {
     setMounted(true);
   }, []);
 
+  const { language, setLanguage, t } = useLanguage();
+
   const navItems = [
-    { href: "/#home", label: "Home" },
-    { href: "/#projects", label: "Projekte" },
-    { href: "/#skills", label: "Skills" },
-    { href: "/#about", label: "Über mich" },
-    { href: "/#contact", label: "Kontakt" },
-    { href: "/impressum", label: "Impressum" },
-    { href: "/datenschutz", label: "Datenschutz" },
+    { href: "/#home", key: "nav.home" },
+    { href: "/#projects", key: "nav.projects" },
+    { href: "/#skills", key: "nav.skills" },
+    { href: "/#about", key: "nav.about" },
+    { href: "/#contact", key: "nav.contact" },
+    { href: "/impressum", key: "nav.impressum" },
+    { href: "/datenschutz", key: "nav.datenschutz" },
   ];
 
   return (
@@ -29,7 +32,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="/#home" className="text-xl font-bold">
-            Portfolio
+            {t("logo.portfolio")}
           </a>
 
           {/* Desktop Navigation */}
@@ -41,40 +44,60 @@ export function Navigation() {
                 className="text-sm font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.label}
+                {t(item.key)}
               </a>
             ))}
             
-            {/* Theme Toggle */}
+            {/* Language + Theme Toggle */}
             {mounted && (
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg hover:bg-secondary transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-              </button>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setLanguage(language === "de" ? "en" : "de")}
+                  className="px-2 py-1 rounded-lg hover:bg-secondary transition-colors text-sm"
+                  aria-label="Toggle language"
+                >
+                  {language === "de" ? "DE" : "EN"}
+                </button>
+
+                <button
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className="p-2 rounded-lg hover:bg-secondary transition-colors"
+                  aria-label="Toggle theme"
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                </button>
+              </div>
             )}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
             {mounted && (
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg hover:bg-secondary transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-              </button>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setLanguage(language === "de" ? "en" : "de")}
+                  className="px-2 py-1 rounded-lg hover:bg-secondary transition-colors text-sm"
+                  aria-label="Toggle language"
+                >
+                  {language === "de" ? "DE" : "EN"}
+                </button>
+
+                <button
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className="p-2 rounded-lg hover:bg-secondary transition-colors"
+                  aria-label="Toggle theme"
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                </button>
+              </div>
             )}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -102,7 +125,7 @@ export function Navigation() {
                 className="block py-2 text-sm font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.label}
+                {t(item.key)}
               </a>
             ))}
           </div>

@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "@/components/language-provider";
 
 export function Hero() {
+  const { t } = useLanguage();
   return (
     <section
       id="home"
@@ -37,10 +39,10 @@ export function Hero() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-lg sm:text-xl text-muted-foreground mb-2">
-              Hallo, ich bin
+              {t("hero.greeting")}
             </h2>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              Frontend Developer
+              {t("hero.title")}
             </h1>
           </motion.div>
 
@@ -51,8 +53,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
-            Ich entwickle moderne, performante Web-Anwendungen mit Fokus auf
-            clean Code, best practices und herausragende User Experience.
+            {t("hero.value")}
           </motion.p>
 
           {/* Tech Stack */}
@@ -193,13 +194,13 @@ export function Hero() {
               href="#projects"
               className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
-              Projekte ansehen
+              {t("hero.cta.projects")}
             </a>
             <a
               href="#contact"
               className="px-8 py-3 border border-border rounded-lg font-medium hover:bg-secondary transition-colors"
             >
-              Kontakt aufnehmen
+              {t("hero.cta.contact")}
             </a>
           </motion.div>
 
@@ -214,7 +215,7 @@ export function Hero() {
               href="#projects"
               className="inline-flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors"
             >
-              <span className="text-sm mb-2">Scroll</span>
+              <span className="text-sm mb-2">{t("hero.scroll")}</span>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}

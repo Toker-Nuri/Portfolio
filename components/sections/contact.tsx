@@ -2,39 +2,41 @@
 
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, MessageSquare, Phone } from "lucide-react";
-
-const socialLinks = [
-  {
-    icon: Mail,
-    label: "Email",
-    href: "mailto:n.toker@yahoo.com",
-    color: "hover:text-red-500",
-    handle: "n.toker@yahoo.com",
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    href: "https://github.com/Toker-Nuri",
-    color: "hover:text-purple-500",
-    handle: "Toker-Nuri",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/nuri-toker-649aa334b/",
-    color: "hover:text-blue-500",
-    handle: "nuri-toker-649aa334b",
-  },
-  {
-    icon: Phone,
-    label: "Telefon",
-    href: "tel:+491743389049",
-    color: "hover:text-sky-500",
-    handle: "+49 174 3389049",
-  },
-];
+import { useLanguage } from "@/components/language-provider";
 
 export function Contact() {
+  const { t } = useLanguage();
+
+  const socialLinks = [
+    {
+      icon: Mail,
+      label: t("contact.social.email"),
+      href: "mailto:n.toker@yahoo.com",
+      color: "hover:text-red-500",
+      handle: "n.toker@yahoo.com",
+    },
+    {
+      icon: Github,
+      label: t("contact.social.github"),
+      href: "https://github.com/Toker-Nuri",
+      color: "hover:text-purple-500",
+      handle: "Toker-Nuri",
+    },
+    {
+      icon: Linkedin,
+      label: t("contact.social.linkedin"),
+      href: "https://www.linkedin.com/in/nuri-toker-649aa334b/",
+      color: "hover:text-blue-500",
+      handle: "nuri-toker-649aa334b",
+    },
+    {
+      icon: Phone,
+      label: t("contact.social.phone"),
+      href: "tel:+491743389049",
+      color: "hover:text-sky-500",
+      handle: "+49 174 3389049",
+    },
+  ];
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -46,13 +48,8 @@ export function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Lass uns zusammenarbeiten
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ich bin immer offen für neue Möglichkeiten und spannende Projekte.
-            Kontaktiere mich gerne über einen der folgenden Kanäle.
-          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t("contact.title")}</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("contact.desc")}</p>
         </motion.div>
 
         {/* Contact Card */}
@@ -99,15 +96,13 @@ export function Contact() {
             viewport={{ once: true }}
             className="text-center pt-8 border-t border-border"
           >
-            <p className="text-muted-foreground mb-4">
-              Bevorzugst du direkten Kontakt?
-            </p>
+            <p className="text-muted-foreground mb-4">{t("contact.prefer_direct")}</p>
             <a
               href="mailto:n.toker@yahoo.com"
               className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               <Mail className="h-5 w-5" />
-              Schreib mir eine Email
+              {t("contact.cta.email")}
             </a>
           </motion.div>
         </motion.div>
@@ -122,9 +117,9 @@ export function Contact() {
         >
           <p>
             © 2025 Nuri Toker</p>
-            <a href="/impressum" className="ml-2 hover:underline text-foreground">Impressum</a>
+            <a href="/impressum" className="ml-2 hover:underline text-foreground">{t("nav.impressum")}</a>
             <span className="mx-2"> </span>
-            <a href="/datenschutz" className="hover:underline text-foreground">Datenschutz</a>
+            <a href="/datenschutz" className="hover:underline text-foreground">{t("nav.datenschutz")}</a>
          
         </motion.div>
       </div>
