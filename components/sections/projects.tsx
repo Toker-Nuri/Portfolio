@@ -77,7 +77,7 @@ const projects = [
     title_de: "WeFixIt - KI Mechatroniker",
     title_en: "WeFixIt - AI Mechatronics",
     description_de:
-      "Flutter-App mit Supabase-Backend für KFZ-Wartungen, Kosten und Dokumente, inklusive Uploads, Export, Benachrichtigungen, KI-Chatbot und Diagnose (OBD-Anbindung). Aktuell in der Testphase.",
+      "Flutter-App die mithilfe von KI entwickelt wird, Supabase-Backend für KFZ-Wartungen, Kosten und Dokumente, inklusive Uploads, Export, Benachrichtigungen, KI-Chatbot und Diagnose (OBD-Anbindung). Aktuell in der Testphase.",
     description_en:
       "Flutter app with Supabase backend for vehicle maintenance, expenses and documents, including uploads, export, notifications, AI chatbot and diagnostics (OBD integration). Currently in testing.",
     video: "/WeFixIt.mp4",
